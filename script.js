@@ -33,8 +33,8 @@ function some(array, callBackFunction) {
 function find(array, callBackFunction) {
     for (let x = 0; x < array.length; x++) {
         const arrayFind = array[x];
-        if (arrayFind === array[x]) {
-            return arrayFind[x]
+        if (arrayFind[x] === array[x]) {
+            return arrayFind;
         }
 
         else if (arrayFind !== array[x]) {
@@ -45,10 +45,30 @@ function find(array, callBackFunction) {
 }
 
 //Katas5 findIndex()
-
+function findIndex(array, callBackFunction) {
+    for (let x = 0; x < array.length; x++) {
+        const arrayIndex = array[x];
+        if (arrayIndex[x] === array[x]) {
+            return arrayIndex[x]
+        }
+        else if (arrayFind !== array[x]) {
+            return -1;
+        }
+    }
+}
 
 //Katas6 every()
-
+function every(array, callBackFunction) {
+    for (let x = 0; x <array.length; x++) {
+        const arrayEvery = array[x];
+        if (arrayEvery === array) {
+            return true;
+        }
+        else if (arrayEvery !== array[x]) {
+            return false;
+        }
+    }
+}
 
 //Katas7 filter()
 
