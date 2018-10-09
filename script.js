@@ -70,24 +70,12 @@ function every(array, callBackFunction) {
 }
 
 //Katas7 filter()
-function filter(array, callbackFunction) {
-
-    let matchingNumbers = []
-
-    for (i = 0; i < array.length; i++) {
-        const value = array[i]
-        let match = matchingNumbers.push(callbackFunction(value, i, matchingNumbers))
+function filter (array, callbackFunction){
+    let result = [];
+    for (let i = 0; i < array.length; i++){
+        if (callbackFunction(array[i]) === true){
+            result.push(array[i])
+        }
     }
-
-    return matchingNumbers
+    return result;
 }
-
-let newNumber = filter(numbers, function(number, i, array) {
-
-    if (number > 10) {
-
-        return number
-    } else { return "" }
-
-})
-
